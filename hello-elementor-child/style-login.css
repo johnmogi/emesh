@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700&subset=hebrew');
+
+:root {
+  --nav-height: 80px;
+  --main-color: #FF5287;
+  --light-color: #3e3e3e;
+  --bg-color: #FFF2F9;
+}
+
+.login h1 a{
+    padding-bottom: 0 !important;
+    width: 200px;
+    background-size: 140px;
+}
+
+body{
+  background-color:var(--bg-color);
+  display: flex;
+}
+
+.login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover{
+    color: var(--main-color);
+}
+
+.login form .input, .login input[type=password], .login input[type=text]{
+  border: 2px solid var(--light-color);
+  border-radius: 50px;
+  padding: 5px 20px;
+}
+
+input#wp-submit {
+    background-color: var(--main-color);
+    border: none;
+    font-size: 16px;
+    padding: 2px 30px;
+    margin-top: 30px;
+    border-radius: 50px;
+}
+
+
+body.login {
+    font-family: "rubik", sans-serif;
+    padding-left: 28vw;
+    background-size: 144vh;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: left;
+}
+
+#login_error, .login .message, .login .success {
+    border: 2px solid var(--main-color) !important;
+    padding: 20px;
+    font-size: 16px;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+div#login {
+    width: 430px;
+    padding: 65px;
+    background: #fff;
+    border-radius: 10px;
+    /* border: 4px solid #000000; */
+    /* margin-top: 5vh; */
+    /* border: navajowhite; */
+    border-radius: 120px 240px 140px 131px;
+    margin-top: 80px;
+}
+
+p#nav {
+    display: inline-block;
+    float: right;
+    padding: 0 !important;
+    font-size: 16px !important;
+}
+
+p#backtoblog {
+    display: inline-block;
+    float: left;
+    font-size: 16px !important;
+    margin-top: 24px;
+    padding: 0 !important;
+}
+
+form#loginform {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 40px 5px;    
+}
+
+p.forgetmenot {
+    margin-top: 30px;
+}
+
+#login h1 a{
+    height: 150px;
+    margin: 0 auto;
+    max-width: 200px;
+    margin-bottom: 35px;
+}
+.login .button.wp-hide-pw{
+    left: 5px;
+    top: 2px;
+
+}
+@media screen and (max-width: 977px){
+    div#login {
+        border-radius: 0;
+        padding: 30px;
+        width: 100%;
+        margin: 0;
+        border: solid 5px #222;    
+    }
+    body.login{
+        padding:0 !important;
+    }
+}

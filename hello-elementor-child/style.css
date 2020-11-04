@@ -1,0 +1,217 @@
+/*   
+  Theme Name:        emesh
+  Author:            Netricko
+  Theme URI:         http://netricko.com/netricko-child/
+  Description:       Hello Elementor Child Theme
+  Author URI:        https://netricko.com
+  Template:          hello-elementor
+  Version:           1.0
+  Stable tag:        1.0
+  Requires at least: 4.9
+  Tested up to:      5.2
+  License:           GNU General Public License v3 or later.
+  License URI:       https://www.gnu.org/licenses/gpl-3.0.html
+  Text Domain:       beautiz
+*/
+@import url('https://fonts.googleapis.com/css?family=Assistant:400,600,700&subset=hebrew');
+
+
+:root {
+  --max-width: 1180px;
+  --nav-height: 80px;
+  --main-color: #B05767;
+  --light-color: #e5dcff;
+  --light-bg: #FAFAFA;
+  --bg-color: #ffffff;
+  --font-color: #1D1D1D;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+body.no-scroll{
+  overflow-y: hidden;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #ffffff;
+  background: var(--main-color);
+}
+
+::selection {
+  color: #ffffff;
+  background: var(--main-color);
+}
+
+.slider-part:hover .slider-desc{
+  /*top:-16px !important;*/
+}
+
+/*navbar*/
+
+#nav-header{
+  z-index: 1000;
+  min-height: 20px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;  
+}
+
+#main-nav .menu-item a{
+  font-size:20px;
+}
+.elementor-button span {
+    text-decoration: none;
+}
+
+#nav-header.open{
+  min-height:100%;
+}
+
+
+#nav-header.scrolled.down{
+  top:-85px !important;
+}
+
+#nav-header.scrolled , #nav-header:hover{
+  background-color: #fff;
+}
+
+#nav-header.scrolled #menu-btn a , #nav-header.scrolled #nav-call a{
+  border-color:#000;
+  color:#000;
+}
+#nav-header.scrolled #menu-btn:hover a{
+  border-color:#12784A;
+}
+#nav-header.scrolled #menu-btn a , #nav-header:hover #menu-btn a , #nav-header.scrolled #nav-call a , #nav-header:hover #nav-call a{
+  border-color:#000;
+  color:#000;
+}
+#nav-header.scrolled #nav-call a:hover , #nav-header:hover #nav-call a:hover{
+  color:#fff;
+  border-color:#12784A;
+}
+
+#nav-header.scrolled #menu-btn:hover a , #nav-header:hover #menu-btn:hover a{
+  border-color:#12784A;
+}
+@media screen and (max-width: 977px){
+  body:not(.elementor-editor-active) #nav-header , body:not(.elementor-editor-active) #fixed-search{
+    position: fixed;
+    width: 100%;
+    top:0;
+  }  
+  #wpadminbar{
+    display: none;
+  }
+
+
+  #nav-header.scrolled.down{
+    top:-85px;
+  }  
+
+}
+
+/*Hamburger*/
+
+#hamburger-icon {
+  z-index: 1000;
+  width: 28px;
+  height: 16px;
+  position: relative;
+  display: block;
+}
+#hamburger-icon .line {
+  display: block;
+  background: var(--main-color);
+  width: 28px;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  border-radius: 1.5px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+#hamburger-icon .line.line-1 {
+  top: 0;
+}
+#hamburger-icon .line.line-2 {
+  top: 50%;
+}
+#hamburger-icon .line.line-3 {
+  top: 100%;
+}
+/*#hamburger-icon:hover .line-1, #hamburger-icon:focus .line-1 {
+  transform: translateY(-1.5px);
+  -webkit-transform: translateY(-1.5px);
+  -moz-transform: translateY(-1.5px);
+}
+#hamburger-icon:hover .line-3, #hamburger-icon:focus .line-3 {
+  transform: translateY(1.5px);
+  -webkit-transform: translateY(1.5px);
+  -moz-transform: translateY(1.5px);
+}*/
+#hamburger-icon.open .line-1 {
+  transform: translateY(8px) translateX(0) rotate(45deg);
+  -webkit-transform: translateY(8px) translateX(0) rotate(45deg);
+  -moz-transform: translateY(8px) translateX(0) rotate(45deg);
+}
+#hamburger-icon.open .line-2 {
+  opacity: 0;
+}
+#hamburger-icon.open .line-3 {
+  transform: translateY(-8px) translateX(0) rotate(-45deg);
+  -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);
+  -moz-transform: translateY(-8px) translateX(0) rotate(-45deg);
+}
+
+.elementor-menu-toggle{
+  display: none;
+}
+
+/*accessability*/
+
+#pojo-a11y-toolbar .pojo-a11y-toolbar-toggle a {
+    border-radius: 30px !important;
+    font-size: 160% !important;
+    position: relative;
+    left: 10px;
+}
+
+#pojo-a11y-toolbar .pojo-a11y-toolbar-toggle a {
+    background-color: rgba(255, 255, 255, 0.79) !important;
+    color: #6c6c6c !important;
+    margin-right: 30px;
+}
+.pojo-a11y-toolbar-toggle {
+    box-shadow: none !important;
+}
+
+.grow , .grow a{
+  transition: 0.3s all;
+}
+.grow:hover , .grow a:hover{
+  transform: scale(1.05);
+}
+
+
+
+@media screen and (max-width: 977px){
+  #pojo-a11y-toolbar .pojo-a11y-toolbar-toggle a {
+      margin-right: 15px !important;
+  }  
+}
+
+
+
+@media screen and (min-width: 978px){
+
+
+}
+
